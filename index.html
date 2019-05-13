@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meat name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<title>AskPal</title>
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css?family=Kodchasan');
+		*{
+			outline: none !important;
+		}
+        body{
+        	background-color: #000000;
+        	font-family: 'Kodchasan', sans-serif;
+        	scroll-behavior: smooth;
+
+        }
+        .header1{
+        	position: fixed;
+        	top: 0px;
+        	left: 0px;
+        	z-index: 1000000;
+        	background: transparent;
+        }
+        p{
+        	font-size: 1.15rem;
+        }
+        .navbar{
+        	transition: 0.5s;
+        	background: transparent !important;
+        	color: white;
+        	top: 0;
+        }
+        .bgtr{
+        	background: transparent;
+        }
+        .navbar.scrolled{
+        	background: #000 !important;
+        	transition: 0.5s;
+        }
+        .cwhite{
+        	color: white;
+        }
+        .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+         color: #000;
+         background: #fff;
+         }
+
+         .navbar-light .navbar-nav .active>.nav-link:hover
+         {
+            color: #000;
+         }
+         
+         .navbar-light .navbar-nav .nav-link {
+    color: rgba(255,255,255,.8);
+}
+
+       .navbar-light .navbar-nav .nav-link:hover,
+       .navbar-light .navbar-nav .nav-link:hover
+        {
+    color: rgba(255,255,255,1);
+}
+
+
+       .navbar-light .navbar-brand,
+       .navbar-light .navbar-brand:hover,
+       .navbar-light .navbar-brand:focus,
+       .navbar-light .navbar-brand:visited 
+       {
+    color: rgba(255,255,255,1);
+    font-size: 2.5rem;
+    font-weight: 600;
+       }
+      .banner{
+      	margin-top: 40px;
+      	position: relative;
+      	top: 0;
+      	width: 100%;
+      	height: 100vh;
+      	background-image: url(images/m4.jpg);
+      	color: white;
+      	background-size: cover;
+      	margin-bottom: 0;
+
+      }
+
+      .banner:before{
+      	top: 0;
+      	content: '';
+      	position: absolute;
+      	width: 100%;
+      	height: 400px;
+      	left: 0;
+      	background: linear-gradient(#000, transparent);
+      	pointer-events: none;
+      }
+
+      .banner:after{
+      	bottom: 0;
+      	content: '';
+      	position: absolute;
+      	width: 100%;
+      	height: 400px;
+      	left: 0;
+      	background: linear-gradient(360deg,#000, transparent);
+      	pointer-events: none;
+      }
+
+      .height100p{
+      	height: 100vh;
+      }
+
+      .h100{
+      	height: 100%;
+      }
+
+      .contentBox{
+      	position: relative;
+      	display: flex;
+      	justify-content: center;
+      	align-items: center;
+      	text-align: center;
+      	z-index: 10;
+      }
+
+    .bar
+    {
+      width: 30px;
+      height: 3px;
+      margin: 5px;
+      background: dodgerblue;
+      transition: all 0.5s ease;
+    }
+
+    .contentBox h1
+    {
+    	text-transform: uppercase;
+    	font-weight: 800;
+    	color: #fff;
+    	font-size: 5rem;
+    }
+
+    .contentBox p{
+    	color: #fff;
+    	font-size: 1.3rem;
+    }
+
+    .sec1{
+    	padding: 100px 0;
+    	background: #000;
+    }
+    
+    .headerText
+    {
+    	color: #fff;
+    }
+    .headerText h2{
+    	margin-bottom: 20px;
+    	font-size: 2.5rem;
+    }
+
+    .placeBox{
+    	position: relative;
+    	max-width: 300px;
+    	height: 400px;
+    	margin: 0 auto;
+    	background: #000;
+    	margin-top: 30px;
+    }
+
+    .placeBox .imgBx{
+    	width: 100%;
+    	height: 100%;
+    }
+
+    .placeBox .imgBx img{
+    	object-fit: cover;
+    	width: 100%;
+    	height: 100%;
+    }
+
+    .blog
+    {
+    	background: #D3D3D3;
+    }
+
+    .jstfcntnt
+    {
+    	justify-content: center;
+    	text-align: center;
+    	align-items: center;
+    }
+
+    .getstarted{
+    	position: relative;
+    	padding: 100px 0;
+    	background-image: url(images/m5.jpg);
+    	background-size: cover;
+    	min-height: 100vh;
+    }
+
+    .getstarted form
+    {
+    	position: relative;
+    	z-index: 1000;
+    }
+
+    .getstarted .form-control
+    {
+    	background: transparent;
+    	border: none;
+    	border-bottom: 2px solid rgba(255,255,255.2);
+    	height: 50px;
+    	border-radius: 0;
+    	background: rgba(0,0,0,.6);
+    	color: #fff;
+    	font-size: 1.25rem;
+    	outline: none;
+    }
+
+    .getstarted .form-control:focus,
+    .getstarted .form-control:hover
+    {
+    	border: none;
+    	box-shadow: none;
+    	border-bottom: 2px solid rgba(255,255,255,1);
+    }
+
+    .getstarted label
+    {
+    	color: #fff;
+    	font-size: 1.25rem;
+    }
+
+    footer{
+    	background: #000;
+    	padding: 50px 0 0;
+    }
+
+    .sci
+    {
+    	margin:0;
+    	display: flex;
+    	padding: 0;
+    	justify-content: center;
+    	align-items: center;
+    }
+
+    .sci li
+    {
+    	list-style: none;
+    	margin: 0 20px;
+    }
+
+    .sci li a
+    {
+    	color: #777;
+    	font-size: 2em;
+    	transition: 0.5s; 
+    }
+
+    .sci li a:hover
+    {
+    	color: #fff;
+    }
+
+    .crypt
+    {
+    	margin-top: 20px;
+    	text-align: center;
+    	color: #777;
+    }
+
+
+
+	</style>
+</head>
+<body data-spy="scroll" data-targer=".navbar" data-offset="50">
+    	<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    	 <div class="container bgtr">
+  <a class="navbar-brand cwhite" href="#">AskPal</a>
+  <button class="navbar-toggler nvbrtgglr" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon">
+    	<div class="bar"></div>
+    	<div class="bar"></div>
+    	<div class="bar"></div>
+    </span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-lg-auto cwhite">
+      <li class="nav-item">
+        <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#explore">Explore</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#getstarted">Get Started</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#blog">Blog</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="login.php">Login</a>
+      </li>
+      <!-- <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li> -->
+    </ul>
+  </div>
+</div>
+</nav>
+    
+
+    <div class="jumbotron jumbotron-fluid height100p banner" id="home">
+      <div class="container h100">
+      	<div class="contentBox h100">
+      		<div>
+      		  <h1>Undiscovered Answers</h1>
+      		  <p>kfdgfkdsjfhgkdshfg dkjfjghksdhfgkldshlfgskdhg ;dfhgksdhgkdshgksdhfg dfkfjhgskdhfgkdshfkgshkdfg ksjdghsdjhfkgjshkdjfhgskjdhfg kjsjfhdgksdhfgkshdfkgjshdkjfhg kjkdjffhgksdhfgsdjhfkgjhsdkfhgskdjgh sjdfjfhgksdhfgksdhfgksdhkfg ksjdfhgskdhfgksdhfgkshd</p>
+      	    </div>
+      	</div>
+  
+      </div>
+    </div>
+    
+    <section class="sec1" id="explore">
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-sm-8 offset-sm-2"> 
+                  <div class="headerText text-center">
+                  	<h2>Ask The World</h2>
+                  	<p>fkghslkdfhgslkdjg kskdjfjfhgskdjhfgskdjhfgkshdkfgh dghskdhgskdhgfkshdfgk  jkdjfghdghsdkhgskdfhgksdhfgkshdfg sdkfjkhhgsdkfghskdfgkjshdkfgshkdfg djkjfhgskdhfgksdfhglksdhfgksldfghksldjfhg ksjkdffghdshfglskdhglksdhfglshdfglkhdskfgh</p>
+                  </div>
+    			</div>
+    		</div>
+    		<div class="row">
+    			<div class="col-sm-4">
+    				<div class="placeBox">
+    					<div class="imgBx">
+    						<img src="https://as1.ftcdn.net/jpg/00/57/71/26/500_F_57712630_eeJIJ2OGfT8OcPooxf0OB25IJe76PVSt.jpg" class="img-fluid">
+    					</div>
+    					<!-- <div class="content">
+    					    <h3>Place Name <br><span>Country Name</span></h3>
+    					</div> -->
+    				</div>
+    			</div>
+    			<div class="col-sm-4">
+    				<div class="placeBox">
+    					<div class="imgBx">
+    						<img src="https://as1.ftcdn.net/jpg/00/88/06/16/500_F_88061621_8Sosmw0HbLimdU8QeqJLLiFmLbqX78y5.jpg" class="img-fluid">
+    					</div>
+    					<!-- <div class="content">
+    					    <h3>Place Name <br><span>Country Name</span></h3>
+    					</div> -->
+    				</div>
+    			</div>
+    			<div class="col-sm-4">
+    				<div class="placeBox">
+    					<div class="imgBx">
+    						<img src="https://as1.ftcdn.net/jpg/00/75/95/02/500_F_75950269_DeW8NDK2rGRxmOxPEEJyrJqhhrKGYbHb.jpg" class="img-fluid">
+    					</div>
+    					<!-- <div class="content">
+    					    <h3>Place Name <br><span>Country Name</span></h3>
+    					</div> -->
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+    <section class="blog" id="blog">
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-sm-8 offset-sm-2">
+    				<div class="headerText jstfcntnt">
+    					<h2>Our Latest Improvements</h2>
+    					<p>fkghslkdfhgslkdjg kskdjfjfhgskdjhfgskdjhfgkshdkfgh dghskdhgskdhgfkshdfgk  jkdjfghdghsdkhgskdfhgksdhfgkshdfg sdkfjkhhgsdkfghskdfgkjshdkfgshkdfg djkjfhgskdhfgksdfhglksdhfgksldfghksldjfhg ksjkdffghdshfglskdhglksdhfglshdfglkhdskfgh</p>
+    				</div>
+    			</div>
+    		</div>
+    		<div class="row">
+    			<div class="col-sm-6 my-2">
+    				<div class="blogpost">
+    					<div class="imgBx">
+    						<img src="https://as1.ftcdn.net/jpg/01/72/88/98/500_F_172889842_lXekD0rtX87DbIITiTjyWc8sg7JOYdS9.jpg" class="img-fluid">
+    					</div>
+    				</div>
+    			</div>
+    			<br>
+    			<div class="col-sm-6 my-2">
+    				<div class="blogpost">
+    					<div class="imgBx">
+    						<img src="https://as1.ftcdn.net/jpg/00/86/67/72/500_F_86677230_fuSgh95B8NbnSbis3g4DVIE2KVXY3V8Y.jpg" class="img-fluid">
+    					</div>
+    				</div>
+    			</div>
+    			<br>
+    			<div class="col-sm-6 my-2">
+    				<div class="blogpost">
+    					<div class="imgBx">
+    						<img src="https://as1.ftcdn.net/jpg/00/22/99/68/500_F_22996889_P8zBakbwNLYnJCf4yRaDdntIjk7kbcXq.jpg" class="img-fluid">
+    					</div>
+    				</div>
+    			</div>
+    			<br>
+    			<div class="col-sm-6 my-2">
+    				<div class="blogpost">
+    					<div class="imgBx">
+    						<img src="https://as1.ftcdn.net/jpg/01/01/16/34/500_F_101163419_YfsAaUJW8qxdPy3O2vsZjSgxeqaahsL6.jpg" class="img-fluid">
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+    <section class="getstarted" id="getstarted">
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-sm-12">
+    				<div class="headerText text-center">
+    					<h2>Sign Up</h2>
+    					<p>djhksdjfhksjdfh slkshdfksdhfksdhfkjsdfh sjdjfhksdhfkshdfkjsdhkfjhs lksdhfkjsdhfksdhfksdjfhksjdhf</p>
+    				</div>
+    			</div>
+    		</div>
+    		<div class="row clearfix">
+    			<div class="offset-sm-2 col-sm-8">
+    				<form>
+    					<div class="form-group">
+    						<label>Name</label>
+    						<input type="text" name="" class="form-control" required>
+    					</div>
+    					<div class="form-group">
+    						<label>Email</label>
+    						<input type="email" name="" class="form-control" required>
+    					</div>
+    					<div class="form-group">
+    						<label>Phone</label>
+    						<input type="number" name="" class="form-control" required>
+    					</div>
+    					<div class="form-group">
+    						<label>Password</label>
+    						<input type="password" name="" class="form-control" required>
+    					</div>
+    					<div class="form-group">
+    						<!-- <button class="btn btnD1">Submit</button> -->
+    						<center><input type="submit" name="" class="" value="Submit"></center>
+    					</div>
+    				</form>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+
+    <footer>
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-sm-12">
+    				<ul class="sci">
+    					<li>
+    						<a href="#"><i class="fa fa-facebook"></i></a>
+    					</li>
+    					<li>
+    						<a href="#"><i class="fa fa-twitter"></i></a>
+    					</li>
+    					<li>
+    						<a href="#"><i class="fa fa-google-plus"></i></a>
+    					</li>
+    					<li>
+    						<a href="#"><i class="fa fa-linkedin"></i></a>
+    					</li>
+    					<li>
+    						<a href="#"><i class="fa fa-instagram"></i></a>
+    					</li>
+    				</ul>
+    				<p class="crypt">
+    					© AskPal.co.in
+    				</p>
+    			</div>
+    		</div>
+    	</div>
+
+
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+    	// str = window.location.href;	
+    	// st = str.split("").reverse().join("");
+    	// y=st.indexOf('/');
+    	// if( y < 3 ){
+    	// 	x = st.length;
+    	// 	s1 = st.substring(0,x-y);
+    	// 	st = s1.split("").reverse().join("");
+    	// 	st += "#home";
+    	// 	window.location.href = st;
+    	// } 
+    	$(document).scroll(function(){
+    		$('.navbar').toggleClass('scrolled',$(this).scrollTop()>$('.navbar').height());
+    	})
+    </script>
+</body>
+</html>
